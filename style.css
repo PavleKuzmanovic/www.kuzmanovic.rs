@@ -1,0 +1,2146 @@
+/* NOTES */
+
+/* For Polygon Creation, Use https://bennettfeely.com/clippy/ */
+
+/* Animation for Graphic Design Page Takeoff Template: animation: nameOfAnim 5s ease-in-out forwards !important; */
+
+/* Predefined Tags */
+
+body {
+
+    background-color: black;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Landing Page Initial Load */
+@keyframes initialLoad {
+    0% {opacity: 1}
+    70% {opacity: 1}
+    100% {opacity: 0.7}
+}
+
+/* Custom Website */
+#wrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    top: 0;
+    
+}
+
+/* OVERVIEW */
+#scroll-overview {
+    height: 1px;
+    width: 100%;
+    margin-top: 100%;
+    position: relative;
+    pointer-events: none;
+}
+#scroll-text {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    transition: 1.5s ease-in-out;
+    opacity: 0;
+    color: black;
+    top: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+#scroll-text > h1 ~ p {
+    position: absolute;
+    font-size: 0.7vw;
+}
+#scroll-text > h1 {
+    top: 7%;
+    left: 30%;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 2vw;
+}
+#scroll-text > #scroll-text-one {
+    top: 20%;
+    left: 10%;
+    width: 20%;
+}
+#scroll-text > #scroll-text-two {
+    top: 32%;
+    right: 7%;
+    width: 20%;
+}
+#scroll-text > #scroll-text-three {
+    top: 55%;
+    left: 6%;
+    width: 20%;
+}
+#scroll-text > #scroll-text-four {
+    top: 70%;
+    right: 15%;
+    width: 30%;
+}
+@media only screen and (max-width: 1800px) {
+    #scroll-text > h1 ~ p {
+        position: absolute;
+        font-size: 0.9vw;
+    }
+    #scroll-text > #scroll-text-two {
+        top: 25%;
+        right: 7%;
+        width: 25%;
+    }
+
+    #scroll-text > #scroll-text-four {
+        top: 65%;
+        right: 15%;
+        width: 40%;
+    }
+}
+
+
+/* ------------------------------- Graphic Design Tab ------------------------------- */
+#graphic-design {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('landing-page/background-grafic.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 0, 60% 0, 50% 50%, 0 100%);
+    transition: all .3s ease-in-out;
+    z-index: 0;
+    opacity: 0.7;
+}
+#graphic-design:hover {
+    clip-path: polygon(0 0, 70% 0, 60% 50%, 0 100%);
+    z-index: 1;
+    opacity: 1;
+}
+/* Added With Javascript */
+.graphic-design-click {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+}
+.wrapper-goodbye {
+    animation: graphic-design-fadeout 7s ease-in-out forwards !important;
+}
+@keyframes graphic-design-fadeout {
+    0%{opacity: 1;}
+    50%{opacity: 1;}
+    100%{opacity: 0.1;}
+}
+/* Graphic Design Text */
+#graphic-design > h1 {
+    color: white;
+}
+#graphic-design > p {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    width: 20%;
+    height: 40%;
+    margin-left: 20%;
+    margin-top: 10%;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+#graphic-design:hover > p {
+    opacity: 0.9;
+}
+.graphic-design-text-takeoff {
+    animation: graphicDesignTextTakeoff 5s ease-in-out forwards !important;
+}
+@keyframes graphicDesignTextTakeoff{
+    10% {opacity: 0%}
+    100% {opacity: 0%}
+}
+
+/* Rocket */
+#rocket {
+    position: fixed;
+    bottom: 5%;
+    margin-left: -3%;
+    transform: rotate(30deg);
+    transform-origin: center;
+    transition: all .3s ease-in-out;
+    z-index: 50;
+    pointer-events: none;
+}
+#rocket > img {
+    width: 5vw;
+}
+#graphic-design:hover ~ #rocket {
+    transform: rotate(45deg);
+}
+/* JS Variant */
+.graphic-design-hover-rocket {
+    transform: rotate(45deg) !important;
+}
+.rocket-takeoff {
+    animation: rocketTakeoff 10s ease-in-out forwards !important;
+}
+@keyframes rocketTakeoff {
+    30% {transform: rotate(0deg); margin-left: 47%; bottom: 80%}
+    70% {transform: rotate(0deg); margin-left: 47%; bottom: 40%}
+    79% {transform: rotate(0deg); margin-left: 47%; bottom: 120%}
+    80% {transform: rotate(0deg); margin-left: 2%; bottom: 120%}
+    99% {transform: rotate(0deg); margin-left: 2%; bottom: 5%;}
+    100% {transform: rotate(0deg); margin-left: 2%; bottom: 5%;  pointer-events: visible}
+}
+.rocket-return {
+    animation: rocketReturn 5s forwards ease-in-out !important;
+}
+@keyframes rocketReturn {
+    0% {transform: rotate(0deg); margin-left: 2%; bottom: 5%}
+    30% {transform: rotate(0deg);margin-left: 2%; bottom: 10%}
+    55% {transform: rotate(45deg)}
+    69% {transform: rotate(0deg)}
+    70% {transform: rotate(0deg);margin-left: 47%; bottom: 80%}
+    95% {transform: rotate(0deg);margin-left: 47%; bottom: 70%}
+    100% {transform: rotate(0deg);margin-left: 47%; bottom: 120%}
+}
+#rocket-text-one {
+    position: fixed;
+    background-color: rgba(150,150,150,0.7);
+    color: white;
+    font-size: 25px;
+    left: 4%;
+    bottom: 26%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 56% 75%, 10% 100%, 21% 75%, 0% 75%);
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    z-index: 11;
+    opacity: 0;
+    pointer-events: none;
+}
+#graphic-design:hover ~ #rocket-text-one {
+    opacity: 1;
+}
+/* JS Variant */
+.graphic-design-hover-text {
+    opacity: 1 !important;
+}
+#rocket-text-two {
+    position: fixed;
+    background-color: rgba(150,150,150,0.7);
+    color: white;
+    font-size: 25px;
+    left: 6%;
+    bottom: 26%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 56% 75%, 10% 100%, 21% 75%, 0% 75%);
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    z-index: 11;
+    opacity: 0;
+    pointer-events: none;
+}
+#rocket:hover ~ #rocket-text-two {
+    opacity: 1;
+}
+#sky-load {
+    width: 100%;
+    max-width: 100%;
+    height: 0%;
+    z-index: 10;
+    position: fixed;
+    background-image: url('graphic-designer/sky-loading.svg');
+    background-color: #6ca7f4;
+    background-repeat: repeat-y;
+    background-size: cover;
+
+}
+.sky-load-initialize {
+    animation: skyLoadInit 6s linear forwards !important;
+}
+@keyframes skyLoadInit{
+    60% {height: 0%;}
+    75% {height: 100%; background-position-y: -20%}
+    100% {height: 100%; background-position-y: 270%}
+}
+/* ------------------------------- Networking Tab -------------------------------*/
+#networking {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('landing-page/background-networking.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(100% 0, 60% 0, 50% 50%, 100% 100%);
+    transition: all .3s ease-in-out;
+    z-index: 0;
+    opacity: 0.7;
+}
+#networking:hover {
+    clip-path: polygon(100% 0, 50% 0, 40% 50%, 100% 100%);
+    z-index: 1;
+    opacity: 1;
+}
+
+/* Added With Javascript */
+.networking-click {
+    clip-path: polygon(100% 0, 0% 0, 0% 100%, 100% 100%) !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+}
+
+/* Networking Text */
+#networking > h1 {
+    color: white;
+    Float: right;
+}
+#networking > p {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    float: right;
+    width: 20%;
+    height: 40%;
+    right: 20%;
+    margin-top: 10%;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+#networking:hover > p {
+    opacity: 0.9;
+}
+
+/* Shutdown Transition */
+#shutdown {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('network-administrator/turnoff.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 11;
+    pointer-events: none;
+}
+.shutdown-show {
+    opacity: 1 !important;
+}
+
+/* ------------------------------- Web Development Tab ------------------------------- */
+#web-development {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0%;
+    background-image: url('landing-page/web.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0 100%, 50% 50%, 100% 100%, 100% 100%, 0% 100%);
+    transition: all .3s ease-in-out;
+    z-index: 0;
+    opacity: 0.7;
+}
+#web-development:hover {
+    clip-path: polygon(0 80%, 50% 40%, 100% 80%, 100% 100%, 0% 100%);
+    z-index: 1;
+    opacity: 1;
+}
+
+/* Added With Javascript */
+.web-development-click {
+    clip-path: polygon(0 0%, 50% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+}
+
+/* Web Development Text */
+#web-development > h1 {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+#web-development > p {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    width: 30%;
+    height: auto;
+    bottom: 10%;
+    left: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+#web-development:hover > p {
+    opacity: 0.9;
+}
+
+
+/* ============================================================================ Website - Graphic Design ============================================================================ */
+
+/* CORE */
+
+#wholeSite-Graphic {
+    position: absolute;
+    width: 100%;
+    margin-top: -12000px; /* Is a -10000 */
+    z-index: 2;
+}
+
+
+.wholeSite-Graphic-Initialize {
+    animation: graphicAppear 10s ease-in-out forwards !important;
+}
+@keyframes graphicAppear {
+    100%{margin-top: 0%;}
+}
+
+/* Colors */
+
+.purpleBackground {
+    background-color: blueviolet;
+}
+
+/* NAVBAR */
+#wholeSite-Graphic > #graphic-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+    margin-top: -500px;
+    display: none;
+}
+
+.graphic-navbar-appear {
+    animation: graphicNavbarSlide 1s ease-in-out forwards;
+    animation-delay: 10s;
+    display: block !important; 
+}
+@keyframes graphicNavbarSlide {
+    100% {margin-top: 0px}
+}
+
+/* Navigation Buttons */
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons {
+    text-align: center;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1 {
+    background-color: rgba(240, 240, 240, 0.7);
+    border-radius: 50px;
+    margin: 20px 1vw;
+    width: 10vw;
+    padding: 10px 0px;
+    font-size: 1vw;
+    transition: 0.1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1 > #graphic-polygon-nav-one {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: gray;
+    opacity: 0.7;
+    width: 30%;
+    height: 1.5vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: 0.1s ease-in-out;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1 > #graphic-polygon-nav-one > #graphic-polygon-nav-two {
+    clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
+    background-color: rgb(114, 114, 114);
+    width: 100%;
+    height: 1.5vw;
+    transition: 0.1s ease-in-out;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1:hover {
+    background-color: white;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1:hover > #graphic-polygon-nav-one {
+    background-color: violet;
+    height: 2.5vw;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1:hover > #graphic-polygon-nav-one > #graphic-polygon-nav-two {
+    background-color: yellow;
+    height: 2.5vw;
+}
+
+/*Social */
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-social {
+    text-align: center;
+    display: flex;
+    width: 30%;
+    height: 4vw;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    justify-content:flex-end;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-social > a {
+    height: 100%;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-social > a > img {
+    margin: 10px;
+    height: 100%;
+    opacity: 0.5;
+}
+#wholeSite-Graphic > #graphic-navbar > #graphic-nav-social > a > img:hover {
+    opacity: 1;
+}
+/* Background Breaker */
+.background-breaker {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    padding-top: 1.5vw;
+    font-size: 8vw;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 4%, rgba(226,0,255,0.3594481738007703) 89%, rgba(226,0,255,0) 100%);
+}
+.purpleText {
+    color:blueviolet;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.background-breaker > p {
+    opacity: 0.5;
+}
+
+/* Planet Surface One */
+#wholeSite-Graphic > #graphic-planet-surface-one {
+    position: absolute;
+    width: 100%;
+    height: 14vw;
+    margin-top: -7%;
+    background-image: url('graphic-designer/planet_surface-one.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* I AM */
+
+/* I Am Tab */
+#wholeSite-Graphic > #graphic-card-title-iam {
+    background-color: white;
+    width: 15%;
+    margin-left: 85%;
+    text-align: right;
+    border-top-left-radius: 5vw;
+    position: relative;
+}
+#wholeSite-Graphic > #graphic-card-title-iam > h1 {
+    font-size: 4vw;
+    margin-bottom: 0%;
+}
+#wholeSite-Graphic > #graphic-card-title-iam > #graphic-polygon-iam-one {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background-color: violet;
+    width: 100%;
+    height: 2vw;
+    position: absolute;
+    bottom: 0;
+}
+#wholeSite-Graphic > #graphic-card-title-iam > #graphic-polygon-iam-one > #graphic-polygon-iam-two {
+    clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
+    background-color: yellow;
+    width: 100%;
+    height: 2vw;
+}
+
+/*Banner One*/
+#wholeSite-Graphic > #graphic-iam > #graphic-iam-one {
+    background-color: #6ca7f4;
+    position: relative;
+    text-align:center;
+}
+#wholeSite-Graphic > #graphic-iam > #graphic-iam-one > #graphic-iam-image-one {
+    background-color: white;
+    background-image: url('universal/pavle.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 80%;
+    width: 11%;
+    border-radius: 50% 50% 50% 50%;
+    left: 5%;
+    top: 10%;
+    z-index: 12;
+}
+#wholeSite-Graphic > #graphic-iam > #graphic-iam-one > #graphic-iam-image-one-mask {
+    position: absolute;
+    background-color: white;
+    height: 80%;
+    width: 11%;
+    border-radius: 50% 50% 50% 50%;
+    left: 5%;
+    top: 10%;
+    animation: imageWobble 5s infinite linear;
+    z-index: 10;
+}
+@keyframes imageWobble {
+    0% {border-radius: 40% 50% 50% 50%; transform: rotate(0deg);}
+    25% {border-radius: 50% 40% 50% 50%; transform: rotate(90deg);}
+    50% {border-radius: 50% 50% 40% 50%; transform: rotate(180deg);}
+    75% {border-radius: 50% 50% 50% 40%; transform: rotate(270deg);}
+    100% {border-radius: 40% 50% 50% 50%; transform: rotate(360deg);}
+}
+#wholeSite-Graphic > #graphic-iam > #graphic-iam-one > #graphic-iam-banner-one {
+    padding: 50px 35%;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+/* Banner Two */
+#wholeSite-Graphic > #graphic-iam > #graphic-iam-two {
+    background-color: rgb(253, 92, 33); /* Was Orangered */
+    position: relative;
+    text-align: center;
+}
+#wholeSite-Graphic > #graphic-iam > #graphic-iam-two > #graphic-iam-image-two {
+    background-color: white;
+    background-image: url('graphic-designer/world.svg');
+    background-size: contain;
+    background-position:right bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    right: 0%;
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+}
+#wholeSite-Graphic > #graphic-iam > #graphic-iam-two > #graphic-iam-banner-two {
+    padding: 50px 35%;
+    font-size: 1vw;
+    color: white;
+    font-weight: 700;
+}
+
+/* Bottom Polygons */
+#wholeSite-Graphic > #graphic-iam > #graphic-polygon-iam-three {
+    clip-path: polygon(0 0, 100% 0, 100% 27%, 0% 100%);
+    background-color: violet;
+    width: 100%;
+    height: 60px;
+}
+#wholeSite-Graphic > #graphic-iam > #graphic-polygon-iam-three > #graphic-polygon-iam-four {
+    clip-path: polygon(0 0, 100% 0, 100% 27%, 0% 100%);
+    background-color: yellow;
+    width: 100%;
+    height: 50%;
+}
+
+/* SATURN */
+#wholeSite-Graphic > #graphic-saturn {
+    width: 100%;
+    height: 700px;
+    background-image: url('graphic-designer/saturn.svg');
+    background-position-x: 150%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    animation: saturnWobble 15s ease-in-out infinite;
+    margin-top: -5%;
+}
+@keyframes saturnWobble {
+    25% {background-position-x: 147%; background-position-y: 20px;}
+    50% {background-position-x: 145%; background-position-y: 0px;}
+    75% {background-position-x: 147%; background-position-y: -20px;}
+    100% {background-position-x: 150%; background-position-y: 0%;}
+}
+
+/* Planet Surface Two */
+#wholeSite-Graphic > #graphic-planet-surface-two {
+    position: absolute;
+    width: 100%;
+    height: 14vw;
+    margin-top: -10%;
+    background-image: url('graphic-designer/planet_surface-two.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: 0;
+}
+
+/* THE RIG */
+
+/* The Rig Tab */
+#wholeSite-Graphic > #graphic-card-title-therig {
+    background-color: white;
+    width: 15%;
+    border-top-right-radius: 5vw;
+    position: relative;
+    margin-top: -3%;
+}
+#wholeSite-Graphic > #graphic-card-title-therig > h1 {
+    font-size: 4vw;
+    margin-bottom: 0%;
+}
+#wholeSite-Graphic > #graphic-card-title-therig > #graphic-polygon-therig-one {
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    background-color: violet;
+    width: 100%;
+    height: 2vw;
+    position: absolute;
+    bottom: 0;
+}
+#wholeSite-Graphic > #graphic-card-title-therig > #graphic-polygon-therig-one > #graphic-polygon-therig-two {
+    clip-path: polygon(0 50%, 0% 100%, 100% 100%);
+    background-color: yellow;
+    width: 100%;
+    height: 2vw;
+}
+
+/* The Rig Container */
+#wholeSite-Graphic > #graphic-therig {
+    width: 100%;
+    position: relative;
+}
+
+/* Banner One */
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-one {
+    position: relative;
+}
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-one > #graphic-therig-one-image {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    background-image: url('graphic-designer/rig.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+}
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-one > #graphic-therig-banner-one {
+    display: flex;
+    justify-content:flex-end;
+    background-image: url('graphic-designer/carbon.png');
+    background-size: 70px;
+    padding-bottom: 5%;
+}
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-one > #graphic-therig-banner-one > .therig-blocks {
+    margin-top: 0;
+    display: inline-block;
+    font-size: 1.3vw;
+    color: white;
+    padding: 50px;
+    width: 30%;
+} 
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-one > #graphic-therig-banner-one > .therig-blocks > ul {
+    list-style: square;
+}
+
+/* Banner Two */
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-two {
+    position: relative;
+    background-image: url('graphic-designer/circuitboard.svg');
+    background-color:white;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-two > h1 {
+    font-size: 40px;
+    color: rgb(39, 39, 39);
+}
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-two > #graphic-therig-banner-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-two > #graphic-therig-banner-two > .therig-blocks-two {
+    display: inline-block;
+    width: 300px;
+    margin: 0px 20px;
+}
+#wholeSite-Graphic > #graphic-therig > #graphic-therig-two > #graphic-therig-banner-two > .therig-blocks-two > img {
+    height: 100%;
+    width: 100%;
+}
+
+/* STALACTITES */
+#wholeSite-Graphic > #stalactites {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('graphic-designer/stalactites.svg');
+    z-index: 15;
+    background-repeat: repeat-x;
+}
+
+/* SPACE PARALLAX */
+#wholeSite-Graphic > .space-parallax {
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    background-image: url('graphic-designer/space.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    text-align: center;
+    color: white;
+    padding-top: 400px;
+}
+
+/* PORTFOLIO */
+
+/* Meteor Top */
+#wholeSite-Graphic > #meteor-top {
+    width: 100%;
+    margin-top: 400px;
+    position: relative;
+    pointer-events: none;
+}
+#wholeSite-Graphic > #graphic-portfolio {
+    text-align: center;
+    background-color: white;
+    padding-bottom: 100px;
+    position: relative;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block {
+    text-align: center;
+    width: 30%;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > #graphic-portfolio-text {
+    padding: 0px 70px;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > #graphic-portfolio-text > p {
+    padding: 3%;
+    font-size: 0.7vw;
+}
+
+/* 2D Portfolio specific */
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block-one {
+    display: inline-block;
+    width: 4vw;
+    height: 5vw;
+    margin: 1vw 1vw;
+    position: relative;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block-one-large {
+    display: inline-block;
+    width: 7vw;
+    height: 5vw;
+    margin: 1vw 2vw;
+    position: relative;
+}
+
+/* 3D Portfolio specific */
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block-two {
+    display: inline-block;
+    width: 9vw;
+    height: 7vw;
+    margin: 0vw 1vw;
+    position: relative;
+}
+
+/* For both 2D and 3D */
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block:hover {
+    transform: scale(2.5);
+    z-index: 11;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block > img {
+    height: 100%;
+}
+#wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block > a > img {
+    max-width: 110%;
+    border: 2px black solid;
+}
+
+/* Meteor Bottom */
+#wholeSite-Graphic > #meteor-bottom {
+    width: 100%;
+    transform: rotate(180deg);
+    transform: scaleY(-1);
+    pointer-events: none;
+}
+
+/* CV */
+#wholeSite-Graphic > #graphic-cv {
+    position: absolute;
+    text-align: center;
+    margin: 100px auto 0 auto;
+    width: 12%;
+    transform: rotate(-70deg);
+    animation: cv-floating 5s ease-in-out infinite;
+    left: 43%;
+}
+@keyframes cv-floating {
+    33%{transform: translateY(-20px) rotate(-70deg);}
+    66%{transform: translateY(20px rotate(-70deg));}
+}
+#wholeSite-Graphic > #graphic-cv > a {
+    width: 50%;
+    z-index: 10;
+}
+#wholeSite-Graphic > #graphic-cv > a > #cv-image-graphic {
+    width: 50%;
+    margin: 20px auto;
+    background-color: gray;
+    
+}
+#wholeSite-Graphic > #graphic-cv > a:hover > #cv-image-graphic > object {
+    filter: saturate(100%);
+    filter: brightness(0) invert(1);
+}
+#wholeSite-Graphic > #graphic-cv > a > #cv-image-graphic > object {
+    filter: saturate(0%);
+    pointer-events: none;
+}
+
+/* Message */
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule {
+    position: relative;
+    margin: 500px auto;
+    width: 95vw;
+    height: 50vw;
+    padding: 8%;
+    background-image: url('graphic-designer/capsule.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container {
+    background-color:rgba(0, 0, 0, 0.5);
+    border: 5px solid black;
+    width: 20vw;
+    border-radius: 20%;
+    margin: 0 auto;
+    padding: 1%;
+    position: relative;
+    font-size: 0.7vw;
+    
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form >.graphic-message-form {
+    text-align: center;
+    color: white;
+    margin: 5%;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form >.graphic-message-form > p {
+    margin: 0px;
+    font-weight: 700;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form >.graphic-message-form > input {
+    text-align: center;
+    color: black;
+    width: 70%;
+    border: none;
+    outline: none;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form >.graphic-message-form > textarea {
+    width: 100%;
+    resize: none;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border: none;
+    outline: none;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form > .graphic-message-output {
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin-top: -1vw;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form > .graphic-message-output > p {
+    margin: 0 auto;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form > .graphic-message-button {
+    text-align: center;
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form > .graphic-message-button > button {
+    background-color: rgba(253, 89, 89,1);
+    border-radius: 1vw;
+    border: none;
+    color: white;
+    text-align: center;
+    width: 2vw;
+    height: 2vw;
+    margin: 0 auto;
+    filter: drop-shadow(0.3vw 0.3vw 0vw rgb(37, 37, 37));
+}
+#wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form > .graphic-message-button > button:hover {
+    background-color: rgb(255, 70, 70);
+    filter: drop-shadow(8px 8px 1px rgba(255, 4, 4, 0));
+    transform: translateY(0.3vw);
+}
+/* ============================================================================ Website - Networking ============================================================================ */
+
+/* CORE */
+#WholeSite-Networking {
+    font-family: networking;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    display: none; /* NONE */
+    z-index: 10;
+    top: 0;
+}
+.WholeSite-Networking-Initialize {
+    display: inline !important;
+}
+#initText {
+    position: fixed;
+    color: white;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    font-size: 1vw;
+    font-family:'Courier New', Courier, monospace;
+    /* display: none;  /* FOR TESTING PURPOSES, DELETE THIS */
+
+}
+
+/* Navigation */
+#WholeSite-Networking > #net-navigation {
+    position: fixed;
+    width: 10vw;
+    text-align: center;
+    text-transform: uppercase;
+    left: 5vw;
+    top: 5vw;
+    z-index: 19;
+}
+#WholeSite-Networking > #net-navigation > h1 {
+    background-color: grey;
+    width: 100%;
+    opacity: 0.7;
+    font-size: 1.5vw;
+    margin: 0.5vw;
+}
+#WholeSite-Networking > #net-navigation > h1:hover {
+    opacity: 1;
+}
+.active-nav-item {
+    background-color: green !important;
+    color: white !important;
+    opacity: 1 !important;
+}
+
+/* Font */
+@font-face {
+    font-family: networking;
+    src: url(font/Asai-Analogue.ttf);
+  }
+    
+/* WRAPPER */
+#WholeSite-Networking > #networking-wrapper {
+    width: 50%;
+    height: 100%;
+    margin: 50px auto;
+}
+
+/* DETAIL OVERVIEW */
+#WholeSite-Networking > #networking-wrapper > #detail-overview {
+    color: green;
+    position: relative;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #image {
+    border: green 5px solid;
+    height: 20vw;
+    float: right;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #image > img {
+    height: 100%;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #links {
+    position: absolute;
+    height: 16%;
+    width: 17.42vw;
+    bottom: 0;
+    right: 0;
+    color: black;
+    text-align: center;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #links > a {
+    text-decoration: none;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #links > a > .social-link {
+    background-color: green;
+    color: black;
+    height: 30%;
+    margin: 1% 0%;
+    font-size: 1.5vw;
+    line-height: 0.9vw;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #links > a > .social-link:hover {
+    background-color: lightgreen;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #information {
+    font-size: 2vw;
+}
+#WholeSite-Networking > #networking-wrapper > #detail-overview > #information > ul {
+    list-style: square;
+}
+
+/* ABOUT */
+#WholeSite-Networking > #networking-wrapper > #about {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+#WholeSite-Networking > #networking-wrapper > #about > #about-title {
+    text-transform: uppercase;
+    color: black;
+    background-color: green;
+}
+#WholeSite-Networking > #networking-wrapper > #about > #text {
+    font-size: 40px;
+    color: grey;
+    line-height: 40px;
+}
+
+/* EXPERIENCE */
+#WholeSite-Networking > #networking-wrapper > #experience {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+#WholeSite-Networking > #networking-wrapper > #experience > #experience-title {
+    text-transform: uppercase;
+    color: black;
+    background-color: green;
+}
+#WholeSite-Networking > #networking-wrapper > #experience > #text-one {
+    font-size: 40px;
+    color: grey;
+    line-height: 40px;
+}
+
+#WholeSite-Networking > #networking-wrapper > #experience > #text-one > p > img {
+    float: right;
+    height: 200px;
+}
+#WholeSite-Networking > #networking-wrapper > #experience > #text-two {
+    margin-top: 100px;
+    font-size: 40px;
+    color: grey;
+    line-height: 40px;
+}
+#WholeSite-Networking > #networking-wrapper > #experience > #text-two > p > img {
+    border-radius: 50%;
+    float: left;
+    height: 200px;
+}
+
+/* CERTIFICATES */
+#WholeSite-Networking > #networking-wrapper > #certificates {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+#WholeSite-Networking > #networking-wrapper > #certificates > #cert-title {
+    text-transform: uppercase;
+    color: black;
+    background-color: green;
+}
+#WholeSite-Networking > #networking-wrapper > #certificates > #vitrina > .cert {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+    margin: 20px;
+    overflow: hidden;
+}
+#WholeSite-Networking > #networking-wrapper > #certificates > #vitrina > .cert > .hover {
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    background-color: grey;
+    color: white;
+    font-size: 50px;
+    line-height: 30px;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+#WholeSite-Networking > #networking-wrapper > #certificates > #vitrina > .cert:hover > .hover {
+    height: 50%;
+}
+#WholeSite-Networking > #networking-wrapper > #certificates > #vitrina > .cert > a > img {
+    height: 100%;
+}
+
+/* ACCOMPLISHMENTS */
+#WholeSite-Networking > #networking-wrapper > #accomplishments {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #accomp-title {
+    text-transform: uppercase;
+    color: black;
+    background-color: green;
+    width: 15vw;
+
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #accomp-title > h1 {
+    font-size: 1.7vw;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text {
+    font-size: 1.5vw;
+    color: grey;
+    line-height: 40px;
+    text-align: left;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > ul {
+    list-style: none;
+    padding: 0;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > ul > li:hover {
+    color: white;
+}
+
+/* Accomplishments Popups */
+.accomplishment-show {
+    opacity: 1 !important;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > #li1 {
+    clip-path: polygon(31% 0, 100% 20%, 87% 86%, 0 100%, 8% 28%);
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    right: 0;
+    background-image: url('network-administrator/li1.png');
+    pointer-events: none;
+    opacity: 0;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > #li2 {
+    clip-path: polygon(34% 0, 85% 0, 64% 100%, 12% 100%);
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    right: 0;
+    background-image: url('network-administrator/li2.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    pointer-events: none;
+    opacity: 0;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > #li3 {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    right: 0;
+    background-image: url('network-administrator/li3.png');
+    background-color: white;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > #li4 {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    right: 0;
+    background-image: url('network-administrator/li4.png');
+    background-size: contain;
+    background-repeat:no-repeat;
+    pointer-events: none;
+    opacity: 0;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > #li5 {
+    clip-path: circle(50% at 50% 50%);
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    right: 0;
+    background-image: url('network-administrator/li5.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0;
+}
+#WholeSite-Networking > #networking-wrapper > #accomplishments > #text > #li6 {
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    right: 0;
+    background-image: url('network-administrator/li6.png');
+    background-repeat:no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* SERVICES */
+#WholeSite-Networking > #networking-wrapper > #services {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+#WholeSite-Networking > #networking-wrapper > #services > #services-title {
+    text-transform: uppercase;
+    color: black;
+    background-color: green;
+}
+#WholeSite-Networking > #networking-wrapper > #services > #services-title > h1{
+    margin-bottom: 1px;
+}
+#WholeSite-Networking > #networking-wrapper > #services > #menu {
+    text-transform: uppercase;
+    color: black;
+    
+}
+#WholeSite-Networking > #networking-wrapper > #services > #menu > h1 {
+    margin: 1px auto;
+    display: inline-block;
+    background-color: gray;
+    width: 33.2%;
+    transition: 0.2s ease-in-out;
+    opacity: 0.8;
+
+}
+#WholeSite-Networking > #networking-wrapper > #services > #menu > h1:hover {
+    opacity: 1;
+}
+#WholeSite-Networking > #networking-wrapper > #services > #menu > .active-service {
+    background-color: green !important;
+    opacity: 1 !important;
+}
+#WholeSite-Networking > #networking-wrapper > #services > #text-block > #service-block-text {
+    font-size: 40px;
+    color: grey;
+    line-height: 40px;
+}
+
+
+/* CV */
+#WholeSite-Networking > #networking-wrapper > #network-cv {
+    position: relative;
+    text-align: center;
+    margin: 100px auto 0 auto;
+    width: 30%;
+}
+#WholeSite-Networking > #networking-wrapper > #network-cv > #network-cv-title {
+    text-transform: uppercase;
+    color: black;
+    background-color: green;
+}
+#WholeSite-Networking > #networking-wrapper > #network-cv > #network-cv-title > h1 {
+    margin-bottom: 1px;
+}
+#WholeSite-Networking > #networking-wrapper > #network-cv > a {
+    width: 50%;
+    z-index: 10;
+}
+#WholeSite-Networking > #networking-wrapper > #network-cv > a > #cv-image-network {
+    width: 50%;
+    margin: 20px auto;
+}
+#WholeSite-Networking > #networking-wrapper > #network-cv > a:hover > #cv-image-network > object {
+    filter: saturate(100%);
+    filter: brightness(0) invert(1);
+}
+#WholeSite-Networking > #networking-wrapper > #network-cv > a > #cv-image-network > object {
+    filter: saturate(0%);
+    pointer-events: none;
+}
+
+
+/* CONTACT */
+#WholeSite-Networking > #networking-wrapper > #contact {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-title {
+    text-transform: uppercase;
+    color: black;
+    background-color: green;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-title > h1 {
+    margin-bottom: 1px;
+}
+/* Message Field */
+#WholeSite-Networking > #networking-wrapper > #contact > #message-form {
+    width: 60%;
+    height: 100%;
+    float: right;
+    margin-top: 1px;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #message-form > #subject > p {
+    width: 100%;
+    font-size: 2vw;
+    line-height: 1.5vw;
+    color: gray;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #message-form > #subject > input {
+    width: 100%;
+    color: black;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #message-form > #message-field > textarea {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #message-form > #button-message-send > button {
+    width: 100%;
+    margin-top: 13px;
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 40px;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #message-form > #button-message-send > button:hover {
+    background-color: lightgreen;
+    color: black;
+}
+/* Contact Form */
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-form {
+    width: 30%;
+    text-align: left;
+    padding: 50px 0;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #name{
+    margin-top: 50px;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #name > p {
+    width: 100%;
+    font-size: 2vw;
+    line-height: 1vw;
+    color: grey;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #name > input {
+    width: 100%;
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #email{
+    margin-top: 50px;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #email > p {
+    width: 100%;
+    font-size: 2vw;
+    line-height: 1vw;
+    color: grey;
+}
+#WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #email > input {
+    width: 100%;
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}
+
+
+/* Exit */
+#exit {
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    color: red;
+    font-size: 100px;
+    z-index: 11;
+}
+#exit-message {
+    position: fixed;
+    background-color: black;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    padding: 0 auto;
+    z-index: 11;
+    opacity: 0;
+    pointer-events: none;
+}
+.exit-message-appear {
+    opacity: 1 !important;
+}
+#exit-message-console {
+    margin-bottom: 0px;
+    color: grey;
+}
+#exit-message > #exit-message-main {
+    color: white;
+    font-size: 40px;
+    margin-top: -15px;
+    margin-bottom: 0;
+}
+#turnon {
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('network-administrator/turnon.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 12;
+    pointer-events: none;
+}
+.turnon-appear {
+    opacity: 1 !important;
+}
+
+
+/* ============================================================================ Website - Web Development ============================================================================ */
+
+/* CORE */
+
+#WholeSite-Web {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none; /* NONE is default */
+    z-index: 5;
+}
+@keyframes background-fadein {
+    0% {background-color:rgba(0, 0, 0, 0);}
+    20% {background-color:rgba(250, 250, 250, 1);}
+    90% {background-color:rgba(250, 250, 250, 1);}
+    100% {background-color:rgba(250, 250, 250, 0);}
+}
+.WholeSite-Return {
+    transform: scale(2.5) !important;
+}
+
+/* PARTS */
+#WholeSite-Web > .web-part {
+    width: 49%;
+    position: relative;
+    overflow: hidden;
+}
+#WholeSite-Web > #web-divider {
+    position: relative;
+    width: 2%;
+    background-color: orange;
+    background-color: orange;
+    background-image: url('web-developer/bar-rotate.png');
+    background-size: contain;
+    background-repeat: repeat-y;
+    height: 100%;
+    height: 0%; /*anim-wise--------------------------------------------------------------------<<< */
+}
+
+
+/* Expertise Banner */
+#WholeSite-Web > .web-part > #web-exp-banner {
+    position: absolute;
+    background-color: rgb(136, 172, 250);
+    background-image: url('web-developer/banner.png');
+    background-size: contain;
+    height: 33%;
+    overflow: hidden;
+    top: -33%; /*anim-wise--------------------------------------------------------------------<<< */
+}
+#WholeSite-Web > .web-part > #web-exp-banner > #web-exp-banner-img {
+    position: absolute;
+    background-image: url('universal/pavle.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 47% 100%, 0% 38%);
+    width: 8vw;
+    height: 8vw;
+    right: 0;
+}
+#WholeSite-Web > .web-part > #web-exp-banner > #web-exp-banner-heading {
+    padding-top: 2vw;
+    padding-left: 2vw;
+    padding-bottom: 2vw;
+}
+#WholeSite-Web > .web-part > #web-exp-banner > #web-exp-banner-heading > h1 {
+    color: white;
+}
+#WholeSite-Web > .web-part > #web-exp-banner > #web-exp-banner-text {
+    padding: 0vw 5vw 2vw 4vw;
+    text-align: center;
+    font-size: 0.7vw;
+}
+
+/* Web Builder Pipe One */
+#WholeSite-Web > .web-part > #web-builder-pipe-one {
+    top: 33%;
+    position: absolute;
+    background-color: orange;
+    background-image: url('web-developer/bar.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: 2%;
+    width: 100%;
+    width: 0%; /*anim-wise--------------------------------------------------------------------<<< */
+}
+
+/* Projects Bilboard */
+#WholeSite-Web > .web-part > #web-projects-bilboard {
+    top: 35%;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+    height: 13%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url('web-developer/bilboard.png');
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    left: -100%; /*anim-wise--------------------------------------------------------------------<<< */
+}
+#WholeSite-Web > .web-part >#web-projects-bilboard > h1 {
+    font-size: 5vw;
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff; color:rgba(0, 0, 0, 1);
+    animation: bilboard-glow 2s linear infinite;
+    color:rgba(0, 0, 0, 1);
+}
+
+@keyframes bilboard-glow {
+    0%{text-shadow: 0 0 0px #fff, 0 0 0px #fff; color:rgba(0, 0, 0, 1);}
+    49%{text-shadow: 0 0 0px #fff, 0 0 0px #fff; color:rgba(0, 0, 0, 1);}
+    50%{ text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6; color:rgb(255, 138, 245);}
+    99%{ text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6; color:rgb(255, 138, 245);}
+    100%{text-shadow: 0 0 10px #fff, 0 0 0px #fff; color:rgba(0, 0, 0, 1);}
+}
+
+/* Web Builder Pipe Two */
+#WholeSite-Web > .web-part > #web-builder-pipe-two {
+    top: 48%;
+    width: 100%;
+    height: 2%;
+    position: absolute;
+    background-color: orange;
+    background-image: url('web-developer/bar.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-position: center;
+    width: 0%; /*anim-wise--------------------------------------------------------------------<<< */
+}
+/* Projects Banner */
+
+#WholeSite-Web > .web-part > #web-proj-banner {
+    top: 49.9%;
+    position: absolute;
+    background-image: url('web-developer/brickwall.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50.1%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10%;
+    top: 100%; /*anim-wise--------------------------------------------------------------------<<< */
+}
+#WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project {
+    width: 20%;
+    height: 30%;
+    margin: 2% 2%;
+    display: inline-block;
+    transition: 0.3s;
+    position: relative;
+}
+#WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project > #web-proj-banner-hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    border: 0vw solid rgb(255, 255, 255);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1vw;
+}
+#WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project:hover > #web-proj-banner-hover {
+    border: 0.1vw solid rgb(255, 255, 255);
+    opacity: 1;
+    pointer-events: none;
+
+}
+#WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project > a > img {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* Web Tech Banner */
+#WholeSite-Web .web-part > #web-tech-banner {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(16,0,0,1) 5%, rgba(170,0,0,0.7) 5%, rgba(179,0,0,0.7) 100%);
+    height: 38%;
+    right: 0%; /*anim-wise--------------------------------------------------------------------<<< */
+    top: -38%; /*anim-wise--------------------------------------------------------------------<<< */
+    transition: 0.2s ease-in-out;
+}
+
+
+#WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-slider {
+    position: absolute;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    top: 43.1%;
+    left: -7.7%;
+    margin-top: 0px;
+}
+#WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-slider > h1 {
+    width: 100%;
+    color: white;
+    font-size: 1.5vw;
+    position: relative;
+}
+#WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-container {
+    padding: 5%;
+}
+#WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-container > .web-tech-banner-container-image {
+    width: 10%;
+    display: inline-block;
+    margin: 2% 5%;
+    transition: 0.3s;
+}
+#WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-container > .web-tech-banner-container-image:hover {
+    transform: scale(1.1);
+}
+#WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-container > .web-tech-banner-container-image > img {
+    width: 100%;
+}
+
+
+/* Web Info Banner */
+#WholeSite-Web > .web-part > #web-info-banner {
+    background-color: rgb(245, 245, 245);
+    z-index: 2;
+    position: absolute;
+    height: 38%;
+    padding: 1%;
+    padding-right: 5%;
+    border-bottom: 0.2vw rgb(255, 123, 0) solid;
+    overflow: hidden;
+    top: -38%; /*anim-wise--------------------------------------------------------------------<<< */
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-first {
+    padding: 1% 0%;
+    text-align: left;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-first > h1 {
+    font-size: 1.3vw;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-first > p {
+    font-size: 0.6vw;
+    margin-bottom: 0.5vh;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-second {
+    padding: 1% 0%;
+    text-align: right;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-second > h1 {
+    font-size: 1.3vw;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-second > p {
+    font-size: 0.6vw;
+    margin-bottom: 0.5vh;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-third {
+    padding: 1% 10%;
+    text-align: center;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-third > h1 {
+    font-size: 1.3vw;
+}
+#WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-third > p {
+    font-size: 0.6vw;
+    margin-bottom: 0.5vh;
+}
+
+/* Web Contact Banner */
+#WholeSite-Web > .web-part > #web-contact-banner {
+    z-index: 1;
+    position: absolute;
+    bottom: -100%; /*anim-wise--------------------------------------------------------------------<<< */
+    width: 100%;
+    height: 62%;
+    background-image: url('web-developer/gate.png');
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: 10px;
+    padding-bottom: 5%;
+    transition: 0.3s ease-in-out;
+}
+
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-slider {
+    width: 100%;
+    height: 0.7vw;
+    background-color: black;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-heading {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 3%;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-heading > h1 {
+    font-size: 5vw;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-sign_mailinfo {
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    width: 8%;
+    border: 0.4vw red solid;
+    color: red;
+    text-transform: uppercase;
+    transform: rotate(-25deg);
+    left: 10%;
+    font-size: 0.5vw;
+    font-weight: 900;
+    padding-top: 1%;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > a > #web-contact-banner-sign_cv {
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    width: 8%;
+    border: 0.4vw red solid;
+    color: red;
+    text-transform: uppercase;
+    transform: rotate(15deg);
+    right: 10%;
+    top: 35%;
+    transition: 0.3s;
+    transform-origin: top center;
+    font-size: 0.5vw;
+    font-weight: 900;
+    padding-top: 1%;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > a > #web-contact-banner-sign_cv:hover {
+    transform: rotate(0deg);
+}
+
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form {
+    margin: 0 auto;
+    width: 50%;
+    height: 90%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part {
+    margin: 1%;
+    height: 10%;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part > input {
+    text-align: center;
+    width: 30%;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part > button {
+    background-color: rgb(255, 136, 0);
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1vw;
+    border: black solid 0.3vw;
+    margin-top: 20%;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part > textarea {
+    box-sizing: border-box;
+    resize: none;
+    width: 50%;
+    height: 250%;
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part > button:hover {
+    background-color: rgb(252, 165, 65);
+}
+#WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part > button:active {
+    transform: translateY(0.1vw);
+}
+
+/* Web Player Banner */
+
+#WholeSite-Web > .web-part > #web-player-banner {
+    top: -69%;
+    position: absolute;
+    width: 100%;
+    height: 68%;
+    z-index: 0;
+    background-image: url(web-developer/garage.jpg);
+    background-position: center;
+    background-position-y: -5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+}
+#WholeSite-Web > .web-part > #web-player-banner:hover {
+    background-position-y: -300px;
+}
+.web-player-banner-exit {
+    background-position-y: -1000px !important;
+}
+#WholeSite-Web > .web-part > #web-player-banner > #web-player-banner-bracket {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 20px rgb(255, 0, 0), 0 0 30px #ff0000; color:rgb(255, 2, 2);
+    box-shadow: 5px 5px 0px 5px #000000;
+    margin: 0 auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    width: 18%;
+    font-size: 2vw;
+    background-color: rgb(29, 29, 29);
+}
+
+/* ANIMATION OVERRIDE! */
+
+/* ------------ Animations ------------ */
+
+/* For ID: web-divider */
+@keyframes dividerDrop {
+    0% {height: 0%;}
+    100% {height: 100%;}
+}
+
+/* For ID: web-builder-pipe-one & web-builder-pipe-two */
+@keyframes pipeDrop {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+/* For ID: web-projects-bilboard */
+@keyframes bilboardSlide {
+    0% {left: -100%;}
+    100% {left: 0%;}
+}
+
+/* For NEW class: .web-divider-pipe-cover */
+@keyframes dividerCover {
+    0% {height: 0%;}
+    100% {height: 100%;}
+}
+
+/* For NEW class: .web-builder-pipe-cover */
+@keyframes pipeCover {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+/* For ID: web-exp-banner */
+@keyframes expCrash {
+    0% {top: -33%;}
+    100% {top: 0%;}
+}
+
+/* For ID: web-exp-banner */
+@keyframes projCrash {
+    0% {top: 100%;}
+    100% {top: 49.9%;}
+}
+
+/* For ID: web-part -> First Child */
+@keyframes webPartShake {
+    20% {transform: translateX(0.5%);}
+    40% {transform: translateX(-0.5%);}
+    60% {transform: translateX(0.5%);}
+    80% {transform: translateX(-0.5%);}
+}
+
+/* For ID: web-builder-pipe-three-anim */
+@keyframes pipeLower {
+    0% {top: -2%;}
+    40% {top: 38%;}
+    60% {top: 38%;}
+    100% {top: -2%;}
+}
+/* For ID: web-tech-banner */
+@keyframes techLower {
+    0% {top: -38%; right: 0%;}
+    40% {top: 0%; right: 0%;}
+    60% {top: 0%; right: -96%;}
+    100% {top: 0%; right: -96%;}
+}
+
+/* For ID: web-info-banner */
+@keyframes infoLower {
+    0% {top: -38%;}
+    40% {top: 0%;}
+    100% {top: 0%;}
+}
+
+/* For ID: web-contact-banner */
+@keyframes soundCloud {
+    0% {top: -68%}
+    100% {top: 38%;}
+}
+
+
+/* For ID: web-contact-banner */
+@keyframes gateSpaz {
+    0% {bottom: -100%}
+    50% {bottom: 0%}
+    100% {bottom: -49%;}
+}
+
+@media only screen and (min-width: 900px) {
+    /* ------------ OVERRIDE CLASSES WITH ANIMATIONS ------------ */
+
+    .WholeSite-Web-Init {
+        display: flex !important;
+        transition: 2s ease-in-out;
+        animation: background-fadein 4s forwards;
+        transform-origin: bottom right;
+    }
+
+    /* ANIMATION LEFT SIDE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+    /* Web Divider Extending Animation Center */
+    .web-divider-anim {
+        animation: dividerDrop 1s ease-in-out forwards !important;
+    }
+
+    /* First Pipe Extend Left Side */
+    .web-builder-pipe-one-anim {
+        animation: pipeDrop 0.5s ease-in-out forwards !important;
+        animation-delay: 0.7s !important;
+    }
+
+    /* Second Pipe Extend Left Side */
+    .web-builder-pipe-two-anim {
+        animation: pipeDrop 0.5s ease-in-out forwards !important;
+        animation-delay: 1.0s !important;
+    }
+
+    /* Big Pipe Cover Center */
+    .web-divider-pipe-cover {
+        position: absolute;
+        width: 100%;
+        height: 0%;
+        background-color: black;
+        bottom: 0;
+        animation: dividerCover 0.5s ease-in-out forwards !important;
+        animation-delay: 1.0s !important;
+    }
+
+    /* Bilobard Slide In Center Left */
+    .web-projects-bilboard-anim {
+        animation: bilboardSlide 0.3s ease-in-out forwards !important;
+        animation-delay: 1.5s !important;
+    }
+
+    /* Small Pipe Cover Left */
+    .web-builder-pipe-cover {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        background-color: black;
+        right: 0;
+        animation: pipeCover 0.5s ease-in-out forwards !important;
+        animation-delay: 1.7s !important;
+    }
+
+    /* Experience Top Left Slide In */
+    .web-exp-banner-anim {
+        animation: expCrash 0.5s ease-in-out forwards !important;
+        animation-delay: 2.1s !important;
+    }
+
+    /* Project Bottom left Slide In */
+    .web-proj-banner-anim {
+        animation: projCrash 0.5s ease-in-out forwards !important;
+        animation-delay: 2.1s !important;
+    }
+
+    /* Shake Whole Left Side */
+    .web-part:nth-child(1) {
+        animation: webPartShake 0.3s ease-in-out forwards !important;
+        animation-delay: 2.6s !important;
+    }
+
+    /* ANIMATION RIGHT SIDE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+    /* Info & Tech Animation w/ Bar Top Right */
+    #WholeSite-Web > .web-part > #web-builder-pipe-three {
+        width: 100%;
+        height: 2%;
+        z-index: 2;
+        top: -2%;
+        position: absolute;
+        background-color: orange;
+        background-image: url('web-developer/bar.png');
+        background-size: contain;
+        background-repeat: repeat-x;
+        background-position: center;
+        animation: pipeLower 2s ease-in-out forwards !important;
+        animation-delay: 1.3s !important;
+    }
+    .web-tech-banner-anim {
+        animation: techLower 2s ease-in-out forwards !important;
+        animation-delay: 1.3s !important;
+    }
+    .web-info-banner-anim {
+        animation: infoLower 2s ease-in-out forwards !important;
+        animation-delay: 1.3s !important;
+    }
+    /* Garage Center Animation */
+    .web-player-banner-anim {
+        animation: soundCloud 1s ease-in-out forwards;
+        animation-delay: 2s;
+    }
+
+    /* Gate Animation Bottom Right */
+    .web-contact-banner-anim {
+        animation: gateSpaz 1s ease-in-out forwards;
+        animation-delay: 2.5s;
+    }
+
+    /* HOVER FIXES !!!!! */
+
+    /* Tech Hover Fix */
+    .web-tech-banner-anim-fix {
+        top: 0% !important;
+        right: -96% !important;
+        transition: 0.3s ease-in-out;
+    }
+    .web-tech-banner-anim-fix:hover {
+        right: 0% !important;
+    }
+
+    /* Gate Hover Fix */
+    .web-contact-banner-anim-fix {
+        bottom: -49% !important;
+        transition: 0.3s ease-in-out;
+    }
+    .web-contact-banner-anim-fix:hover {
+        bottom: 0% !important;
+    }
+
+    /* Gate Exit */
+    .web-contact-banner-anim-exit {
+        bottom: -509% !important;
+    }
+
+}

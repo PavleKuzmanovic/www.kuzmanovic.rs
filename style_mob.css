@@ -1,0 +1,926 @@
+
+@media only screen and (max-width: 900px) {
+    
+    /* OVERVIEW */
+#scroll-overview {
+    display: none;
+}
+#scroll-text {
+    display: none;
+}
+
+
+/* ------------------------------- Graphic Design Tab ------------------------------- */
+    #graphic-design {
+        position: absolute;
+        height: 40%;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 0;
+        opacity: 1;
+    }
+    #graphic-design:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        opacity: 1;
+        z-index: 0;
+    }
+    #graphic-design > h1 {
+        text-align: center;
+    }
+    #graphic-design > p {
+        color: white;
+        font-size: 1.7vw;
+        position: absolute;
+        width: 50%;
+        margin-left: 10%;
+        margin-top: 10%;
+        opacity: 0.8;
+        display: none; /* Cut Content */
+    }
+
+    .graphic-design-click {
+        height: 100% !important;
+        z-index: 3 !important;
+        opacity: 1 !important;
+    }
+    #rocket {
+        position: fixed;
+        bottom: 0%;
+        top: 18%;
+        right: 4%;
+        transform-origin: center;
+        transition: all .3s ease-in-out;
+        z-index: 1 !important;
+        pointer-events: none;
+        margin-left: 0;
+        transform: rotate(0deg);
+    }
+    /* JS Variant */
+    .graphic-design-hover-rocket {
+        transform: rotate(0deg) !important;
+    }
+    #rocket > img {
+        width: 20vw;
+    }
+
+    #rocket-text-one {
+        display: none;
+    }
+    #rocket-text-two {
+        display: none;
+    }
+
+    #graphic-design:hover ~ #rocket {
+        transform: rotate(0deg);
+    }
+    .rocket-takeoff {
+        animation: rocketTakeoff 10s ease-in-out forwards !important;
+        z-index: 10 !important;
+    }
+    @keyframes rocketTakeoff {
+        30% {transform: rotate(0deg); right: 50%; top: 30%;}
+        70% {transform: rotate(0deg); right: 30%; top: 20%;}
+        79% {transform: rotate(0deg); right: 30%; top: -50%;}
+        80% {transform: rotate(0deg); right: 80%; top: -50%;}
+        99% {transform: rotate(0deg); right: 80%; top: 70%;}
+        100% {transform: rotate(0deg); right: 80%; top: 70%;  pointer-events: visible;}
+    }
+    .rocket-return {
+        animation: rocketReturn 5s forwards ease-in-out !important;
+    }
+    @keyframes rocketReturn {
+        0% {transform: rotate(0deg); right: 80%; top: 70%;}
+        85% {transform: rotate(0deg); right: 50%; top: 31%}
+        95% {transform: rotate(0deg); right: 50%; top: 75%}
+        100% {transform: rotate(0deg); right: 55%; top: -45%}
+    }
+
+/* ------------------------------- Networking Tab -------------------------------*/
+    #networking {
+        position: absolute;
+        top: 30%;
+        height: 45%;
+        width: 100%;
+        clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 84%);
+        z-index: 2;
+        opacity: 1;
+    }
+    #networking:hover {
+        clip-path: polygon(0 9%, 100% 0, 100% 100%, 0 84%);
+        z-index: 2;
+        opacity: 1;
+        }
+    /* Added With Javascript */
+    .networking-click-ph {
+        clip-path: polygon(100% 0, 0% 0, 0% 100%, 100% 100%) !important;
+        height: 100% !important;
+        top: 0% !important;
+        z-index: 3 !important;
+    }
+    #networking > h1 {
+        color: white;
+        text-align: center;
+        float: none;
+        margin-top: 25%;
+    }
+    #networking > p {
+        color: white;
+        font-size: 1.7vw;
+        position: absolute;
+        float: right;
+        width: 50%;
+        height: 40%;
+        right: 5%;
+        margin-top: 2%;
+        transition: all .3s ease-in-out;
+        opacity: 0.8;
+        text-align: right;
+        display: none; /* Cut Content */
+    }
+
+/* ------------------------------- Web Development Tab ------------------------------- */
+    #web-development {
+        position: absolute;
+        height: 40%;
+        width: 100%;
+        bottom: 0%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 1;
+        opacity: 1;
+    }
+    #web-development:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        opacity: 1;
+        z-index: 0;
+    }
+    .web-development-click-ph {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        height: 100% !important;
+        z-index: 3 !important;
+        opacity: 1; 
+    }
+    #web-development > h1 {
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #web-development > p {
+        color: white;
+        font-size: 1.7vw;
+        position: absolute;
+        width: 90%;
+        height: auto;
+        bottom: 15%;
+        left: 2%;
+        text-align: left;
+        opacity: 0.7;
+        display: none; /* Cut Content */
+    }
+/* ============================================================================ Website - Graphic Design ============================================================================ */
+
+    /* NAVBAR */
+    #wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons {
+        width: 90%;
+    }
+
+    #wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1 {
+        width: 20vw;
+        font-size: 4vw;
+        background-color: white;
+    }
+
+    #wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1 > #graphic-polygon-nav-one {
+        background-color: violet;
+        opacity: 0.4;
+        width: 50%;
+        height: 5vw;
+    }
+    #wholeSite-Graphic > #graphic-navbar > #graphic-nav-buttons > h1 > #graphic-polygon-nav-one > #graphic-polygon-nav-two {
+        clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
+        background-color: yellow;
+        width: 100%;
+        height: 5vw;
+    }
+    /* Social */
+    #wholeSite-Graphic > #graphic-navbar > #graphic-nav-social {
+        text-align: center;
+        display: flex;
+        width: 100%;
+        height: 13vw;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 20px;
+    }
+
+    #wholeSite-Graphic > #graphic-navbar > #graphic-nav-social > a > img {
+        opacity: 1;
+    }
+
+/* Background Breaker */
+
+    .background-breaker {
+        height: 30%;
+        padding-top: 0px;
+        font-size: 13vw;
+        margin-top: 5vw;
+    }
+
+    /* Planet Surface One */
+    #wholeSite-Graphic > #graphic-planet-surface-one {
+        height: 16vw;
+        margin-top: -4%;
+    }
+
+    /* I AM */
+
+    /* I Am Tab */
+    #wholeSite-Graphic > #graphic-card-title-iam {
+        width: 30%;
+        margin-left: 35%;
+        text-align: center;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+        overflow: hidden;
+    }
+    #wholeSite-Graphic > #graphic-card-title-iam > h1 {
+        font-size: 7vw;
+    }
+
+    /*Banner One*/
+    #wholeSite-Graphic > #graphic-iam > #graphic-iam-one > #graphic-iam-image-one {
+        display: none;
+    }
+    #wholeSite-Graphic > #graphic-iam > #graphic-iam-one > #graphic-iam-image-one-mask {
+        display: none;
+    }
+  
+    #wholeSite-Graphic > #graphic-iam > #graphic-iam-one > #graphic-iam-banner-one {
+        padding: 50px 60px;
+        font-size: 4vw;
+        font-weight: 300;
+    }
+
+    /* Banner Two */
+    #wholeSite-Graphic > #graphic-iam > #graphic-iam-two > #graphic-iam-image-two {
+        display: none;
+    }
+    #wholeSite-Graphic > #graphic-iam > #graphic-iam-two > #graphic-iam-banner-two {
+        padding: 50px 60px;
+        font-size: 3vw;
+    }
+
+    /* SATURN */
+    #wholeSite-Graphic > #graphic-saturn {
+    background-position-x: 50%;
+    background-position-y: 50%;
+    animation: saturnWobblePhone 15s ease-in-out infinite;
+    }
+    @keyframes saturnWobblePhone {
+        25% {background-position-x: 47%; background-position-y: 60%;}
+        50% {background-position-x: 45%; background-position-y: 50%;}
+        75% {background-position-x: 47%; background-position-y: 40%;}
+        100% {background-position-x: 50%; background-position-y: 50%;}
+    }
+
+    /* THE RIG */
+
+    #wholeSite-Graphic > #graphic-planet-surface-two {
+        height: 16vw;
+        margin-top: -10%;
+    }
+
+    /* The Rig Tab */
+    #wholeSite-Graphic > #graphic-card-title-therig {
+        width: 30%;
+        margin-left: 35%;
+        text-align: center;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+        overflow: hidden;
+    }
+    #wholeSite-Graphic > #graphic-card-title-therig > h1 {
+        font-size: 7vw;
+    }
+
+    /* Banner One */
+    #wholeSite-Graphic > #graphic-therig > #graphic-therig-one {
+        position: relative;
+    }
+    #wholeSite-Graphic > #graphic-therig > #graphic-therig-one > #graphic-therig-one-image {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    #wholeSite-Graphic > #graphic-therig > #graphic-therig-one > #graphic-therig-banner-one > .therig-blocks {
+        font-size: 3vw;
+        color: white;
+        padding: 10px;
+        width: 100%;
+    } 
+
+    /* PORTFOLIO */
+    #wholeSite-Graphic > #graphic-portfolio {
+        text-align: center;
+        background-color: white;
+        padding-bottom: 100px;
+        position: relative;
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block {
+        width: 100%;
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container {
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > #graphic-portfolio-text {
+        padding: 0px 100px;
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > #graphic-portfolio-text > p {
+        padding: 3%;
+        font-size: 3vw;
+    }
+
+    /* 2D Portfolio specific */
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block-one {
+        width: 20vw;
+        height: 30vw;
+        margin: 5vw 12vw 0vw 0vw;
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block-one-large {
+        width: 30vw;
+        height: 20vw;
+        margin: 1vw 5vw;
+    }
+
+    /* 3D Portfolio specific */
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block-two {
+        display: inline-block;
+        width: 40vw;
+        height: 30vw;
+        margin: 0vw 5vw 0vw 0vw;
+        position: relative;
+    }
+
+    /* For both 2D and 3D */
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block:hover {
+        transform: scale(1);
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block > img {
+        height: 100%;
+    }
+    #wholeSite-Graphic > #graphic-portfolio > #graphic-portfolio-container > .portfolio-block > .portfolio-inner-block-container > .portfolio-inner-block-block > a > img {
+        max-width: 110%;
+        border: 2px black solid;
+    }
+
+    /* Meteor Bottom */
+    #wholeSite-Graphic > #meteor-bottom {
+        width: 100%;
+        transform: rotate(180deg);
+        transform: scaleY(-1);
+        pointer-events: none;
+    }
+
+    /* CV */
+    #wholeSite-Graphic > #graphic-cv {
+        position: absolute;
+        text-align: center;
+        margin: 100px auto 0 auto;
+        width: 40%;
+        transform: rotate(-70deg);
+        animation: cv-floating 5s ease-in-out infinite;
+        left: 30%;
+    }
+    @keyframes cv-floating {
+        33%{transform: translateY(-20px) rotate(-70deg);}
+        66%{transform: translateY(20px rotate(-70deg));}
+    }
+    #wholeSite-Graphic > #graphic-cv > a {
+        width: 50%;
+        z-index: 10;
+    }
+    #wholeSite-Graphic > #graphic-cv > a > #cv-image-graphic {
+        width: 50%;
+        margin: 20px auto;
+        background-color: gray;
+    }
+    #wholeSite-Graphic > #graphic-cv > a:hover > #cv-image-graphic > object {
+        filter: saturate(100%);
+        filter: brightness(0) invert(1);
+    }
+    #wholeSite-Graphic > #graphic-cv > a > #cv-image-graphic > object {
+        filter: saturate(0%);
+        pointer-events: none;
+    }
+    /* Message */
+    #wholeSite-Graphic > #graphic-message > #graphic-message-capsule {
+        position: relative;
+        margin: 500px 0;
+        width: 100%;
+        height: 150vw;
+        padding: 0% 0px;
+        background-image: url('');
+    }
+    #wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container {
+        background-color:rgba(0, 0, 0, 0);
+        border: 0px solid black;
+        width: 90vw;
+        font-size: 4.7vw;
+        
+    }
+    #wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form >.graphic-message-form {
+        text-align: center;
+        color: white;
+        margin: 5%;
+    }
+    #wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form > .graphic-message-button > button {
+        background-color: rgba(253, 89, 89,1);
+        border-radius: 1vw;
+        border: none;
+        color: white;
+        text-align: center;
+        width: 20vw;
+        height: 20vw;
+        margin: 0 auto;
+        filter: drop-shadow(0.8vw 0.8vw 0vw rgb(37, 37, 37));
+    }
+    #wholeSite-Graphic > #graphic-message > #graphic-message-capsule > #graphic-message-capsule-container > #graphic-message-capsule-form > .graphic-message-button > button:hover {
+        background-color: rgb(255, 70, 70);
+        filter: drop-shadow(8px 8px 1px rgba(255, 4, 4, 0));
+        transform: translateY(0.3vw);
+    }
+    /* ============================================================================ Website - Networking ============================================================================ */
+
+    #initText {
+        position: fixed;
+        color: white;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        z-index: 20;
+        font-size: 4vw;
+        font-family:'Courier New', Courier, monospace;
+        /* display: none;  /* FOR TESTING PURPOSES, DELETE THIS */
+    
+    }
+
+    /* WRAPPER */
+    #WholeSite-Networking > #networking-wrapper {
+        width: 95%;
+        margin-top: 10px;
+    }
+
+    /* Navigation */
+    #WholeSite-Networking > #net-navigation {
+        position: fixed;
+        width: 100%;
+        left: 0vw;
+        top: 85%;
+        display: block;
+    }
+    #WholeSite-Networking > #net-navigation > h1 {
+        display: inline-block;
+        background-color: grey;
+        width: 30%;
+        opacity: 0.9;
+        font-size: 7vw;
+    }
+
+    /* DETAIL OVERVIEW */
+    #WholeSite-Networking > #networking-wrapper > #detail-overview {
+        color: green;
+        position: relative;
+    }
+    #WholeSite-Networking > #networking-wrapper > #detail-overview > #image {
+        height: 109vw;
+        float: none;
+    }
+    #WholeSite-Networking > #networking-wrapper > #detail-overview > #image > img {
+        height: 100%;
+    }
+    #WholeSite-Networking > #networking-wrapper > #detail-overview > #links {
+        position: relative;
+        float: right;
+        height: 200px;
+        width: 50%;
+    }
+    #WholeSite-Networking > #networking-wrapper > #detail-overview > #links > a {
+        text-decoration: none;
+    }
+    #WholeSite-Networking > #networking-wrapper > #detail-overview > #links > a > .social-link {
+        font-size: 7vw;
+        line-height: 7vw;
+    }
+    #WholeSite-Networking > #networking-wrapper > #detail-overview > #information {
+        font-size: 5vw;
+    }
+
+    /* ABOUT */
+    #WholeSite-Networking > #networking-wrapper > #about > #text {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    /* EXPERIENCE */
+    #WholeSite-Networking > #networking-wrapper > #experience > #text-one {
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+    #WholeSite-Networking > #networking-wrapper > #experience > #text-one > p > img {
+        height: 150px;
+    }
+    #WholeSite-Networking > #networking-wrapper > #experience > #text-two {
+        font-size: 35px;
+        line-height: 30px;
+    }
+    #WholeSite-Networking > #networking-wrapper > #experience > #text-two > p > img {
+        height: 150px;
+    }
+
+    /* CERTIFICATES */
+    #WholeSite-Networking > #networking-wrapper > #certificates > #vitrina > .cert {
+        position: relative;
+        display: inline-block;
+        height: 170px;
+        margin: 10px;
+        overflow: hidden;
+    }
+    #WholeSite-Networking > #networking-wrapper > #certificates > #vitrina > .cert > .hover {
+        height: 50%;
+    }
+    /* ACCOMPLISHMENTS */
+    #WholeSite-Networking > #networking-wrapper > #accomplishments > #accomp-title {
+        width: 100%;
+    }
+    #WholeSite-Networking > #networking-wrapper > #accomplishments > #accomp-title > h1 {
+        font-size: 30px;
+    }
+  
+    #WholeSite-Networking > #networking-wrapper > #accomplishments > #text {
+        font-size: 35px;
+        color: grey;
+        line-height: 40px;
+        text-align: left;
+    }
+    #WholeSite-Networking > #networking-wrapper > #accomplishments > #text > ul {
+        list-style: square;
+        padding: 0;
+    }
+    #WholeSite-Networking > #networking-wrapper > #accomplishments > #text > ul > li:hover {
+        color: gray;
+    }
+    /* CONTACT */
+    #WholeSite-Networking > #networking-wrapper > #contact {
+        position: relative;
+        text-align: center;
+        margin-top: 100px;
+        height: 500px;
+    }
+    #WholeSite-Networking > #networking-wrapper > #contact > #message-form > #subject > p {
+        font-size: 8vw;
+        line-height: 3vw;
+    }
+    #WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #name > p {
+        font-size: 8vw;
+    }
+    #WholeSite-Networking > #networking-wrapper > #contact > #contact-form > #email > p {
+        font-size: 8vw;
+    }
+  
+
+  /* ============================================================================ Website - Development ============================================================================ */
+
+    .WholeSite-Web-phone-init {
+        display: inline !important;
+        animation: background-fadein-ph 4s forwards;
+        transform-origin: bottom right;
+        transition: 2s ease-in-out;
+    }
+    @keyframes background-fadein-ph {
+        0% {background-color:rgba(0, 0, 0, 0);}
+        20% {background-color:rgba(250, 250, 250, 1);}
+        90% {background-color:rgba(250, 250, 250, 1);}
+        100% {background-color:rgba(250, 250, 250, 0);}
+    }
+
+    .WholeSite-Return-ph {
+        display: none !important;
+    }
+    #WholeSite-Web > .web-part {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Experience Banner */
+    #WholeSite-Web > .web-part > #web-exp-banner {
+        position: relative;
+        background-image: none;
+        animation: phoneStack 0.5s ease-in-out forwards;
+        animation-delay: 0.5s;
+        margin-top: -150%;
+        z-index: 10;
+    }
+    @keyframes phoneStack {
+        0% {margin-top: -100%;}
+        100% {margin-top: 0%;}
+    }
+    #WholeSite-Web > .web-part > #web-exp-banner > #web-exp-banner-img {
+        width: 30vw;
+        height: 30vw;
+    }
+    #WholeSite-Web > .web-part > #web-exp-banner > #web-exp-banner-text {
+        padding: 30vw 6vw 2vw 6vw;
+        text-align: center;
+        font-size: 3vw;
+        z-index: 2;
+    }
+    
+    /* Web Builder Pipe One */
+    #WholeSite-Web > .web-part > #web-builder-pipe-one {
+        display: none;
+    }
+    /* Projects Bilboard */
+    #WholeSite-Web > .web-part > #web-projects-bilboard {
+        position: absolute;
+        background-image: none;
+        background-color: rgba(0, 0, 0, 0);
+        top: 46%;
+        left: 0;
+        z-index: 10;
+        margin-top: -100%;
+        animation: phoneBilboard 0.5s ease-in-out forwards;
+        animation-delay: 1s;
+        z-index: 9;
+    }
+    @keyframes phoneBilboard {
+        0% {margin-top: -100%;}
+        100% {margin-top: 20%;}
+    }
+    #WholeSite-Web > .web-part >#web-projects-bilboard > h1 {
+        font-size: 7vw;
+        text-shadow: none;
+        animation: none;
+        color: white;
+        opacity: 0.1;
+    }
+
+    
+    /* Web Builder Pipe Two */
+    #WholeSite-Web > .web-part > #web-builder-pipe-two {
+        display: none;
+    }
+
+    /* Projects Banner */
+    #WholeSite-Web > .web-part > #web-proj-banner {
+        position: relative;
+        background-image: url('web-developer/darkwall.png');
+        background-color: rgb(0, 0, 0);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 15vw 2vw 8vw 2vw;
+        margin-top: -100%;
+        animation: phoneStack 0.5s ease-in-out forwards;
+        animation-delay: 1s;
+        z-index: 8;
+    }
+    #WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project {
+        width: 40%;
+        height: 40%;
+        margin: 2% 2%;
+        display: inline-block;
+        transition: 0.3s;
+        position: relative;
+    }
+    #WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project > #web-proj-banner-hover {
+        position: absolute;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+        background-color: rgba(0, 0, 0, 0);
+        border: 0vw solid rgb(255, 255, 255);
+        color: white;
+        font-size: 3vw;
+        overflow: hidden;
+    }
+    #WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project:hover > #web-proj-banner-hover {
+        border: none;
+        opacity: 1;
+    }
+    #WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project > #web-proj-banner-hover > p {
+        background-color: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        position: absolute;
+        margin-bottom: 0px;
+        width: 100%;
+
+    }
+    #WholeSite-Web > .web-part > #web-proj-banner > .web-proj-banner-project > a > img {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+    /* Divider */
+    #WholeSite-Web > #web-divider {
+        position: absolute;
+        height: 0%;
+        margin: 0 auto;
+        top: 0;
+        width: 10%;
+        left: 45%;
+        right: 45%; 
+        animation: phoneDivider 0.5s ease-in-out forwards;
+        animation-delay: 0.2s;
+    }
+    @keyframes phoneDivider {
+        0% {height: 0%}
+        100% {height: 100%}
+    }
+
+    /* Web Builder Pipe Three */
+    #WholeSite-Web > .web-part > #web-builder-pipe-three {
+        display: none;
+    }
+
+    /* Web Tech Banner */
+    #WholeSite-Web .web-part > #web-tech-banner {
+        position: relative;
+        left: 0;
+        background-color: black;
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 1) 100%);
+        border-bottom: 1vw solid black;
+        margin-top: -100%;
+        animation: phoneStack 0.5s ease-in-out forwards;
+        animation-delay: 1.5s;
+        z-index: 7;
+    }
+    #WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-slider {
+        position: relative;
+        transform: rotate(0deg);
+        top: 0;
+        left: 0;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        background-color: black;
+    }
+    #WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-slider > h1 {
+        color: white;
+        font-size: 7vw;
+        position: relative;
+    }
+    #WholeSite-Web > .web-part > #web-tech-banner > #web-tech-banner-container > .web-tech-banner-container-image {
+        width: 15%;
+        margin: 2% 5%;
+    }
+
+    /* Web Info Banner */
+    #WholeSite-Web .web-part > #web-info-banner {
+        position: relative;
+        border-bottom: 0.5vw rgb(255, 123, 0) solid;
+        margin-top: -150%;
+        animation: phoneStack 0.5s ease-in-out forwards;
+        animation-delay: 2s;
+        z-index: 6;
+        padding: 5%;
+    }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-first {
+        text-align: left;
+    }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-first > h1 {
+        font-size: 5vw;
+    }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-first > p {
+        font-size: 3vw;
+        }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-second {
+        text-align: right;
+    }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-second > h1 {
+        font-size: 5vw;
+    }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-second > p {
+        font-size: 3vw;
+        }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-third {
+        padding: 2% 10%;
+        text-align: center;
+    }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-third > h1 {
+        font-size: 5vw;
+    }
+    #WholeSite-Web > .web-part > #web-info-banner > #web-info-banner-third > p {
+        font-size: 3vw;
+    }
+
+    /* Web Contact Banner */
+    #WholeSite-Web .web-part > #web-contact-banner {
+        z-index: 1;
+        position: relative;
+        bottom: 0; /*anim-wise--------------------------------------------------------------------<<< */
+        width: 100%;
+        height: 62%;
+        background-image: url('web-developer/darkwall.png');
+        background-color: rgb(0, 0, 0);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-top: -100%;
+        animation: phoneStack 0.5s ease-in-out forwards;
+        animation-delay: 2.5s;
+        z-index: 5;
+    }
+    #WholeSite-Web .web-part > #web-contact-banner > #web-contact-banner-slider {
+        display: none;
+    }
+    #WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-heading > h1 {
+        line-height: 15vw;
+    }
+    #WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-sign_mailinfo {
+        border: none;
+        text-align: left;
+        text-transform: uppercase;
+        transform: rotate(0deg);
+        left: 1%;
+        font-size: 3vw;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        opacity: 0.1;
+        top: 0;
+    }
+    #WholeSite-Web > .web-part > #web-contact-banner > a > #web-contact-banner-sign_cv {
+        background-color: rgba(0, 0, 0, 0);
+        text-align: right;
+        width: 8%;
+        border: none;
+        transform: rotate(0);
+        right: 2%;
+        top: 0%;
+        font-size: 3vw;
+        color: white;
+        opacity: 0.1;
+    }
+    #WholeSite-Web > .web-part > #web-contact-banner > a > #web-contact-banner-sign_cv:hover {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    #WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form {
+        margin: 0 auto;
+        width: 80%;
+    }
+    #WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part > textarea {
+        box-sizing: border-box;
+        resize: vertical;
+        width: 100%;
+    }
+    #WholeSite-Web > .web-part > #web-contact-banner > #web-contact-banner-form > .web-contact-banner-form-part > button {
+        position: relative;
+        background-color: rgb(255, 136, 0);
+        width: 30%;
+        color: white;
+        margin-left: 70%;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 5vw;
+        border: black solid 0.3vw;
+        margin-top: 0%;
+    }
+
+    /* Web Player Banner */
+    #WholeSite-Web > .web-part > #web-player-banner {
+        position: fixed;
+        background: none;
+        height: auto;
+        font-size: 5vw;
+        z-index: 10;
+        top: 0;
+        margin-top: -10%;
+        animation: phoneStack 0.5s ease-in-out forwards;
+        animation-delay: 1.5s;
+    }
+    #WholeSite-Web > .web-part > #web-player-banner > #web-player-banner-bracket {
+        color: rgb(255, 0, 0);
+        text-shadow: 0 0 20px rgb(255, 0, 0), 0 0 30px #ff0000; color:rgb(255, 2, 2);
+        box-shadow: 5px 5px 0px 5px #000000;
+        margin: 0 auto;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+        width: 30%;
+        font-size: 5vw;
+        background-color: rgb(29, 29, 29);
+    }
+}
